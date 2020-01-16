@@ -114,6 +114,7 @@ public class OIDCConfig {
      * @return The Uri where the discovery document can be found
      */
     public Uri getDiscoveryUri() {
+        return mAccount.mDiscoveryUri;
         if (mAccount.mDiscoveryUri.contains(OPENID_CONFIGURATION_RESOURCE)
                 || mAccount.mDiscoveryUri.contains(OAUTH2_CONFIGURATION_RESOURCE)) {
             return Uri.parse(mAccount.mDiscoveryUri);
